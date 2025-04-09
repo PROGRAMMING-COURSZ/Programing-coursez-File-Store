@@ -21,12 +21,12 @@ def main():
                  workers=100)
 
     while True:
-    try:
-        app.run()
-        break
-    except BadMsgNotification:
-        print("Time sync issue, retrying in 10 seconds...")
-        time.sleep(10)
+        try:
+            app.run()
+            break
+        except BadMsgNotification:
+            print("Time sync issue, retrying in 10 seconds...")
+            time.sleep(10)
 
 
 if __name__ == "__main__":
